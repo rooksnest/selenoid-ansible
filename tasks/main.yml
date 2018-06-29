@@ -22,10 +22,10 @@
     image: "aerokube/cm:{{ selenoid_cm_version }}"
     volumes:
     - "/var/run/docker.sock:/var/run/docker.sock"
-    - "${HOME}:/root"
+    - "{{ selenoid_config_dir }}:/root"
     env:
       TZ: "{{ selenoid_time_zone }}"
-      OVERRIDE_HOME: "${HOME}"
+      OVERRIDE_HOME: "{{ selenoid_config_dir }}"
       DOCKER_API_VERSION: "{{ selenoid_docker_api_version }}"
     command: >
       selenoid start
