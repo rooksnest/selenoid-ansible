@@ -1,4 +1,9 @@
 ---
-selenoid_cm_version: 1.3.1
-selenoid_version: 1.4.0
-selenoid_docker_api_version: 1.24
+selenoid_cm_version: latest-release
+selenoid_version: latest-release
+selenoid_docker_api_version: 1.37
+selenoid_limit: 5
+selenoid_tmpfs: 128
+selenoid_config_dir: "{{ ansible_env.HOME }}"
+selenoid_listen_port: 4444
+selenoid_browsers_last_versions: 1
